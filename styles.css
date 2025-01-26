@@ -1,0 +1,156 @@
+:root {
+    --primary-color: #00ff9d;
+    --background-color: #1a1a1a;
+    --secondary-background: #2d2d2d;
+    --text-color: #ffffff;
+    --input-background: #333333;
+    --hover-color: #00cc7d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #888;
+}
+
+.converter-container {
+    background-color: var(--secondary-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group, .select-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+input:focus, select:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+.currency-selectors {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.select-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.swap-button {
+    background-color: var(--input-background);
+    border: none;
+    color: var(--primary-color);
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.swap-button:hover {
+    background-color: var(--hover-color);
+    color: var(--text-color);
+}
+
+.convert-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.convert-button:hover {
+    background-color: var(--hover-color);
+}
+
+.result {
+    margin-top: 1.5rem;
+    text-align: center;
+    display: none;
+}
+
+.result-text {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.exchange-rate {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .converter-container {
+        padding: 1.5rem;
+    }
+
+    .currency-selectors {
+        flex-direction: column;
+    }
+
+    .swap-button {
+        align-self: center;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
